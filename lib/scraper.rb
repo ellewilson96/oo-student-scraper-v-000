@@ -28,11 +28,12 @@ class Scraper
       if social.include?("linkedin")
         student[:linkedin] = social
       elsif social.include?("twitter")
-        student[:twitter] = social 
+        student[:twitter] = social
       elsif social.include?("github")
         student[:github] = social
       else
         student[:blog] = social
+      end
 end
   end
 end
