@@ -10,7 +10,7 @@ class Scraper
     students = []
     student_name = doc.css(h4.student-name).text
     student_location = doc.css(p.student-location).text
-    student_profile_url = 
+    student_profile_url = doc.css(student-card.a)
     students << {name: student_name,
     location: student_location,
     profile_url: student_profile_url}
