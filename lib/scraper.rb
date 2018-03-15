@@ -8,9 +8,9 @@ class Scraper
   def self.scrape_index_page(index_url)
     index_html = Nokogiri::HTML(open(index_url))
     students = []
-    student_name = doc.css(h4.student-name).text
-    student_location = doc.css(p.student-location).text
-    student_profile_url = doc.css(student-card.a)
+    student_name = index_html.css(h4.student-name).text
+    student_location = index_html.css(p.student-location).text
+    student_profile_url = index_html.css(student-card.a)
     students << {name: student_name,
     location: student_location,
     profile_url: student_profile_url}
